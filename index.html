@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        video {
+            width: 100%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="url"> <button id="btnir">IR</button>
+    <video src="" controls></video>
+
+    <script>
+var btn = document.getElementById('btnir');
+var video = document.querySelector('video');
+        btn.addEventListener('click', function() {
+            var url = document.getElementById('url').value;
+            btn.style.display = 'none';
+            document.querySelector('input').style.display = 'none';
+            video.setAttribute('src', url);
+            video.style.display = 'block';
+            console.log(url);
+        })
+    </script>
+</body>
+</html>
